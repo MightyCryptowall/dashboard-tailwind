@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dashboard {
+  height: 100vh;
+}
+.dashboard .dashboard-nav {
+  /* height: 7vh; */
+}
+.dashboard .dashboard-content {
+  height: 100vh;
+}
+.dashboard .dashboard-sidebar {
+  height: 100vh;
+}
+.dashboard .dashboard-sidebar .sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dashboard .dashboard-sidebar .sidebar-links .sidebar-link {
+  cursor: pointer;
+  padding-inline: 1rem;
+  padding-block: 0.3rem;
+  border-radius: 0.5rem;
+  margin-inline: 0.5rem;
+  font-weight: 500;
+}
+.dashboard .dashboard-sidebar .sidebar-links .sidebar-link.active {
+  cursor: not-allowed;
+}
+.dashboard .dashboard-sidebar .sidebar-links .sidebar-link.active a {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.dashboard-dropdown .dashboard-dropdown-detail{
+  transition: all 1s ease;
+  margin-top: 1rem;
+}
+
+.dashboard-dropdown .dashboard-dropdown-detail.hide{
+  height:0; 
+  overflow:hidden;
+  margin-top: -0.1rem
+}
+
