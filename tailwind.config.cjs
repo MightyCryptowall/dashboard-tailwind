@@ -2,8 +2,12 @@
 const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
-    "./index.html",
-    "./main.js",
+    "./index.html", // ignore
+    "./main.js", // ignore
+    './public/*.html',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/views/**/*.{erb,haml,html,slim}'
   ],
   theme: {
     colors:{
@@ -12,7 +16,18 @@ module.exports = {
         500: "#263238",
       }
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+
+  ]
 }

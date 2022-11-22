@@ -1,6 +1,8 @@
 import './style.css'
 import { dashboardNavbar, sideBar, table } from './template'
 
+
+// Function for dropdown
 const activateDashboardDropdowns = () => {
   document.querySelectorAll(".dashboard-dropdown-button").forEach(item => {
     item.addEventListener("click", (e) => {
@@ -23,4 +25,7 @@ document.querySelector("#dashboard-navbar").replaceWith(convertStringToDOM(dashb
 document.querySelector("#table-component").replaceWith(convertStringToDOM(table));
 document.querySelector("#dashboard-sidebar").replaceWith(convertStringToDOM(sideBar));
 
+
+
+// Run Dropdown func
 activateDashboardDropdowns();
