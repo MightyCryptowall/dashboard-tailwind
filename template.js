@@ -1,6 +1,13 @@
 export const dashboardNavbar = `
-  <div class="flex justify-between mb-5" style="width: 100%">
-    <div class="text-gray-600">Dashboard / Tables</div>
+  <div class="flex justify-between items-end mb-5" style="width: 100%">
+    <div class="flex gap-3">
+      <div class="mobile-sidebar-button">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="text-gray-600">Dashboard / Tables</div>
+    </div>
     <div class="flex gap-3 text-sm">
       <a href="#">Some Link</a>
       <a href="#">Sign Out</a>
@@ -77,8 +84,14 @@ export const table = `
 `
 
 export const sideBar = `
-<div class="w-1/6 py-7 bg-gray-200 text-black dashboard-sidebar">
+<div class="md:w-1/6 py-7 bg-gray-200 text-black dashboard-sidebar">
   <div class="sidebar-links gap-7">
+    <div class="sidebar-close-button">
+      <div class="close-button">
+        <div class="line"></div>
+        <div class="line-2"></div>
+      </div>
+    </div>
     <a href="#" class="sidebar-link bg-smoke-500 text-white">Dashboard</a>
     <a href="#" class="sidebar-link">Tables</a>
     <div class="sidebar-link dashboard-dropdown">

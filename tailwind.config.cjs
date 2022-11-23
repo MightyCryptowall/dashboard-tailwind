@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./index.html", // ignore
     "./main.js", // ignore
+    "./template.js", // ignore
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
@@ -17,17 +18,7 @@ module.exports = {
       }
     },
     extend: {
-      fontFamily: {
-
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-
-      },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
-
-  ]
+  plugins: [],
 }

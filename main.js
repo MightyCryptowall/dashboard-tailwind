@@ -14,6 +14,22 @@ const activateDashboardDropdowns = () => {
   })
 }
 
+// Function for sidebar
+const activateSidebar = () => {
+  document.querySelectorAll(".mobile-sidebar-button").forEach(item => {
+    item.addEventListener("click", (e) => {
+      const sidebar = document.querySelector(".dashboard-sidebar");
+      sidebar.classList.toggle("show");
+    })
+  })
+  document.querySelectorAll(".sidebar-close-button").forEach(item => {
+    item.addEventListener("click", (e) => {
+      const sidebar = document.querySelector(".dashboard-sidebar");
+      sidebar.classList.toggle("show");
+    })
+  })
+}
+
 const convertStringToDOM = (string) => {
   var wrapper= document.createElement('div');
   wrapper.innerHTML= string;
@@ -29,3 +45,5 @@ document.querySelector("#dashboard-sidebar").replaceWith(convertStringToDOM(side
 
 // Run Dropdown func
 activateDashboardDropdowns();
+// Run Sidebar func
+activateSidebar();
