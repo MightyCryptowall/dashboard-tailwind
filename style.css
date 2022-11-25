@@ -89,6 +89,24 @@ body{
   display: none;
 }
 
+.collapsable-table-display{
+  cursor: pointer;
+}
+
+.collapsable-table-detail > td{
+  box-sizing: border-box;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+.collapsable-table-detail {
+  display: none;
+}
+
+.collapsable-table-detail.show{
+  display: table-row;
+}
+
 @media (max-width:640px) {
   .dashboard .dashboard-sidebar {
     position: absolute;

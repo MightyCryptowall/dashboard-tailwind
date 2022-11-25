@@ -1,5 +1,5 @@
 import './style.css'
-import { dashboardNavbar, sideBar, table } from './template'
+import { collapsableTable, dashboardNavbar, sideBar, table } from './template'
 
 
 // Function for dropdown
@@ -30,6 +30,16 @@ const activateSidebar = () => {
   })
 }
 
+// Function for collapsable table
+const collapsableTableFunc = () => {
+  document.querySelectorAll(".collapsable-table-toggle-button").forEach(item => {
+    item.addEventListener("click", (e) => {
+      const detail = document.querySelector(`[data-ref-id="111"]`);
+      detail.classList.toggle("show");
+    })
+  })
+}
+
 const convertStringToDOM = (string) => {
   var wrapper= document.createElement('div');
   wrapper.innerHTML= string;
@@ -38,12 +48,12 @@ const convertStringToDOM = (string) => {
 
 
 document.querySelector("#dashboard-navbar").replaceWith(convertStringToDOM(dashboardNavbar));
-document.querySelector("#table-component").replaceWith(convertStringToDOM(table));
+document.querySelector("#table-component").replaceWith(convertStringToDOM(collapsableTable));
 document.querySelector("#dashboard-sidebar").replaceWith(convertStringToDOM(sideBar));
-
 
 
 // Run Dropdown func
 activateDashboardDropdowns();
 // Run Sidebar func
 activateSidebar();
+collapsableTableFunc();
